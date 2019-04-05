@@ -1,0 +1,8 @@
+node_modules
+dist
+src/style/**
+!src/style/main.styl
+
+src/view/
+!src/view/index.pug
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      a {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="input" /> 
+    <a href="/sodfi">one</a> <a href="/one">one</a>
+    <a href="/two">two</a> <a href="/3">ther</a> <a href="/4">4444</a>
+    <script src="./rxjs.umd.min.js"></script>
+    <script>
+      const el = document.querySelector('#input')
+      const adder = (x, y) => x + y
+      const { from, of, fromEvent, interval } = rxjs
+      const { audit, auditTime, map, concat } = rxjs.operators
+      const o = fromEvent(el, 'input')
+      o.pipe(audit((e) => interval(1000))).subscribe((x) =>
+        console.log(x.target.value)
+      )
+
+      const clicks = fromEvent(document, 'click')
+      const res = clicks.pipe(audit((e) => interval(1000)))
+      res.subscribe((x) => console.log(x))
+
+      fromEvent(document.querySelectorAll('a'), 'click')
+        .pipe(
+          map((e) => {
+            e.preventDefault()
+            return e.currentTarget.href
+          })
+        )
+        .subscribe((h) => console.log(h))
+    </script>
+  </body>
+</html>

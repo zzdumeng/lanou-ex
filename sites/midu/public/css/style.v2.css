@@ -1,0 +1,146 @@
+html {
+  font: 16px/1.6 microsoftyahei, "微软雅黑";
+}
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+a {
+  color: #00a0e9;
+}
+a.nav-link {
+  color: #fff;
+}
+a.nav-link:hover {
+  color: #00a0e9;
+}
+a.brand {
+  color: #fff;
+}
+a.brand:hover {
+  color: #00a0e9;
+}
+header {
+  background-color: #4a4a4a;
+}
+.navbar {
+  height: 100px;
+  padding: 0;
+}
+.content {
+  max-width: 1100px;
+  margin: auto;
+}
+.brand {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1;
+}
+.brand span:first-child {
+  font-size: 3rem;
+}
+.brand span:last-child {
+  padding-top: 4px;
+  font-size: 14px;
+}
+.navbar-nav {
+  margin-left: 5rem;
+}
+.nav-item {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  color: #fff;
+  position: relative;
+  margin: 0 10px;
+}
+.nav-item.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  background-color: #00a0e9;
+}
+.nav-item .nav-link {
+  color: #fff;
+  position: relative;
+}
+.nav-item:not(:last-child) .nav-link::after {
+  content: "";
+  height: 16px;
+  width: 1px;
+  background-color: #808080;
+  position: absolute;
+  right: -10px;
+  top: 13px;
+}
+.active > .nav-link {
+  color: #00a0e9;
+}
+.case {
+  padding: 75px 0;
+  color: #999;
+  line-height: 2;
+  background-color: #fff;
+}
+.case:nth-child(even) {
+  background-color: #f6f6f6;
+}
+.case .img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+@media screen and (min-width: 576px) {
+  .case .img-wrapper {
+    max-width: 526px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .case .img-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+}
+.info h1 {
+  font-weight: normal;
+  color: #333;
+}
+.info h4 {
+  color: #333;
+}
+footer {
+  background-color: #4a4a4a;
+  color: #999;
+  padding: 3rem 0;
+  font-size: 0.875rem;
+}
+footer hr {
+  background-color: #999;
+  box-shadow: 0 1px 0 #000;
+}
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  .contact-section {
+    justify-content: flex-start;
+  }
+}
+.qrcode {
+  display: flex;
+}
+@media (min-width: 576px) {
+  .qrcode {
+    justify-content: flex-end !important;
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,237 @@
+.head {
+  background-color: #4a4a4a;
+  color: #fff;
+}
+.head .brand {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 26px;
+  margin-right: 136px;
+}
+.head .brand a {
+  line-height: 1;
+  font-size: 3rem;
+}
+.head .brand span {
+  font-size: 1.125rem;
+}
+.head .links {
+  display: flex;
+}
+.head .links .link {
+  height: 6.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  line-height: 3rem;
+  margin: 0 1.25rem;
+  position: relative;
+}
+.head .links .link::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1rem;
+  bottom: 0.95rem;
+  right: -1.25rem;
+  background-color: #808080;
+}
+.head .links .link:target {
+  color: #00a0e9;
+}
+.head .links .link:last-child::after {
+  width: 0;
+}
+.head .links .link:target::before,
+.head .links .link.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #00a0e9;
+}
+footer {
+  padding: 61px 0;
+  background-color: #4a4a4a;
+  color: #999;
+  font-size: 0.875rem;
+}
+footer a {
+  color: #00a0e9;
+}
+footer hr {
+  background-color: #666;
+  box-shadow: 0 1px 0 #333;
+}
+footer .content {
+  display: flex;
+  justify-content: space-between;
+}
+footer .qrcode {
+  justify-content: center;
+  margin-top: 40px;
+}
+@media (min-width: 568px) {
+  footer .qrcode {
+    justify-content: flex-end;
+  }
+}
+.jumbotron {
+  background-color: #00a0e9;
+  height: 473px;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding: 0;
+}
+.jumbotron .content {
+  color: #fff;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+.jumbotron .content img {
+  align-self: flex-end;
+}
+.jumbotron .content div {
+  padding-top: 73px;
+}
+.jumbotron .content div p {
+  font-size: 18px;
+  width: 610px;
+}
+.jumbotron .content div button {
+  margin-top: 48px;
+  height: 90px;
+  line-height: 90px;
+  padding: 0 2rem;
+  font-size: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.ribbon {
+  position: relative;
+}
+.ribbon .content {
+  position: relative;
+}
+.dots-container {
+  padding-top: 57px;
+}
+.dots {
+  position: absolute;
+  margin-top: 57px;
+  width: 977px;
+  left: 62px;
+  height: 123px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dots .dot {
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border: solid 1px #999;
+  position: relative;
+}
+.dots .dot::after,
+.dots .dot::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background-color: #999;
+  width: 77px;
+}
+.dots .dot::before {
+  top: 6px;
+  left: -77px;
+}
+.dots .dot::after {
+  top: 6px;
+  right: -77px;
+}
+.dots .dot:first-child,
+.dots .dot:last-child {
+  width: 0;
+  height: 0;
+  border: none;
+}
+.dots .dot:first-child::after,
+.dots .dot:last-child::after,
+.dots .dot:first-child::before,
+.dots .dot:last-child::before {
+  height: 0;
+}
+.categories {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 57px 0;
+}
+.categories .category {
+  width: 123px;
+  height: 123px;
+  border-radius: 50%;
+  border: solid 1px #999;
+  font-size: 20px;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+.categories .category.active,
+.categories .category:hover {
+  background-color: #9c0;
+  color: #fff;
+}
+.ribbon-2 {
+  text-align: center;
+  padding-top: 40px;
+  background-color: #f6f6f6;
+}
+.case-groups {
+  margin-bottom: 40px;
+  padding: 15px 0;
+  width: 100%;
+  border: solid 1px #999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.case-groups .case-group {
+  cursor: pointer;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  padding: 0 42px;
+}
+.case-groups .case-group.active,
+.case-groups .case-group:hover {
+  border-radius: 42px;
+  background-color: #00a0e9;
+  color: #fff;
+}
+.cases {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.cases .case {
+  width: 264px;
+  height: 264px;
+  border: solid 1px #999;
+  padding: 8px;
+  margin-bottom: 18px;
+}
+.cases .case img {
+  width: 100%;
+  height: 100%;
+}
+.arrow {
+  padding: 40px 0;
+}

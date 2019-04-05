@@ -1,0 +1,19 @@
+@import 'vars'
+
+html
+  font 16px MicrosoftYahei, "微软雅黑", sans-serif
+ul,ol,li
+  margin 0
+  padding 0
+ol
+  list-style-position: inside
+a
+  color white
+  &,  &:visited, &:hover
+    text-decoration: none
+  &:hover
+    color $primary
+
+.content
+  max-width $content
+  margin auto

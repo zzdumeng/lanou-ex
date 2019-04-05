@@ -1,0 +1,26 @@
+footer {
+  padding: 61px 0;
+  background-color: #4a4a4a;
+  color: #999;
+  font-size: 0.875rem;
+}
+footer a {
+  color: #00a0e9;
+}
+footer hr {
+  background-color: #666;
+  box-shadow: 0 1px 0 #333;
+}
+footer .content {
+  display: flex;
+  justify-content: space-between;
+}
+footer .qrcode {
+  justify-content: center;
+  margin-top: 40px;
+}
+@media (min-width: 568px) {
+  footer .qrcode {
+    justify-content: flex-end;
+  }
+}

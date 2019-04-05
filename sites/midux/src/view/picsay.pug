@@ -1,0 +1,41 @@
+extends layout
+
+block append css
+  link(rel="stylesheet", href="./css/picsay.css")
+
+
+block main
+  .jumbotron.jumbotron-fluid
+    .content
+      div
+        p midu 学院是一所让所有菜鸟进入移动互联网领域的网络学堂，我们每日为您精心挑选内容，每天坚持学习30天必然会让您对移动互联网行业动态行情，互联网的理解和认识，包括产品知识、技术知识、APP设计启发都有帮助。
+        h1 关注midu，您就是行内人。
+        button midu   咨询 APP下载
+      img(src='../img/tushuo.png')
+  .ribbon
+    .content
+      .dots
+        - var num = 9
+        while num > 0
+          .dot
+          - num--
+    .content.categories
+      .category 资讯
+      .category 文章
+      .category UE/UI
+      .category 技术
+      .category.active 图说
+  .ribbon.ribbon-2
+    .content
+      .case-groups
+        .case-group.active UI设计
+        .case-group UE效果
+        .case-group 产品知识
+        .case-group 互联网知识
+      .cases
+        - var n = 1
+        while n < 17
+          .case
+            img(src=`../img/tushuo${n}.png`)
+          - n++
+      img.arrow(src="../img/arrow_down.png")

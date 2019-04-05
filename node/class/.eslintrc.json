@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "semi": "off"
+  },
+  "env": { "browser": true, "node": true, "jquery": true }
+}

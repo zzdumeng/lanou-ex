@@ -1,0 +1,148 @@
+@import './vars.styl'
+@import './header'
+@import './footer'
+
+.swiper-container
+  background-color $tint
+  .swiper-wrapper
+    height 600px
+  .swiper-slide
+    overflow hidden
+    position relative
+  .desc 
+    color #fff
+    width 450px
+    margin-top 120px
+    line-height 1
+    & div
+      margin-bottom: 30px
+    .title
+      font-size 120px
+      text-transform: uppercase
+    .author
+      font-size: 30px
+      text-transform: capitalize
+    .detail
+      font-size: 14px
+      text-transform: uppercase
+      line-height 1.6
+  .swiper-image 
+      position absolute
+      top 80px
+      right 0
+  .swiper-button-prev
+    background url('../img/prev.png') no-repeat
+    width 44px
+    height 100px
+  .swiper-button-next
+    background url('../img/next.png') no-repeat
+    width 44px
+    height 100px
+
+.ribbon
+  text-align center
+  color #666
+  h1 
+    color #333
+    font-weight: normal
+  &:nth-child(even)
+    background-color #fff
+  &:nth-child(odd)
+    background-color #f6f6f6
+  &.ribbon1
+    padding-top 100px
+    padding-bottom 66px
+  &.ribbon2
+    padding 80px 0
+  &.ribbon3
+    padding-top 100px
+
+.services
+  margin-top 74px 
+  display flex
+  justify-content space-between
+  .service
+    display flex
+    flex-direction: column
+    justify-content center
+    align-items center
+    &:first-child > .img-wrapper
+      background-color #37A0ED
+    &:nth-child(2) > .img-wrapper
+      background-color #F66C5C
+    &:nth-child(3) > .img-wrapper
+      background-color #937DD1
+    &:nth-child(4) > .img-wrapper
+      background-color #479EAF
+    &:nth-child(5) > .img-wrapper
+      background-color #B2C260
+    span
+      line-height 48px
+      text-align center
+      vertical-align: bottom
+    .img-wrapper
+      display flex
+      width 182px
+      height 182px
+      border-radius: 50%
+      justify-content center
+      align-items center
+      background-color #fff
+      
+.flow
+  margin-top 76px
+  margin-bottom 266px
+  display flex
+  justify-content space-between
+  .flow-item
+    width 63px
+    height 253px
+    border-radius: 32px
+    background-color #F6F6F6
+    display flex
+    flex-direction: column
+    font-size: 22px
+    .icon
+      width 63px
+      height 63px
+      text-align center
+      line-height 63px
+      border-radius 50%
+      background-color #fff
+      border solid 1px #E8EBF1
+    span
+      line-height 2
+      margin-top 26px
+
+.clients
+  margin-top 60px
+  display flex
+  flex-flow row wrap
+  justify-content space-between
+  .client
+    width 163px
+    height 123px
+    display flex
+    justify-content center
+    align-items center
+    border-radius: 10px
+    border solid 1px #ddd
+    margin-bottom 30px
+
+.cases
+  margin-top 76px
+  display flex
+  flex-flow: row wrap
+  justify-content space-between
+  .case
+    border solid 1px #DDDDDD
+    padding 10px
+    background-color #F6F6F6
+    margin-bottom 20px
+    width 342px
+    height 423px
+    img 
+      width 100%
+      height 100%
+.arrow
+  padding 50px 0 70px 0

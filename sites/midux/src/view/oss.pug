@@ -1,0 +1,100 @@
+extends layout
+
+block append css
+  link(rel="stylesheet", href="./lib/swiper/swiper.min.css")
+  link(rel="stylesheet", href="./css/oss.css")
+
+block main
+  //- swiper
+  .swiper-container
+    // Additional required wrapper
+    .swiper-wrapper
+      // Slides
+      .swiper-slide
+        .content
+          .desc
+            .title sazzi
+            .author jonathan doe
+            .detail
+              | Several senior executives of key energy companies this year have
+              | been removed, arrested, indicted or are under probe for
+              | embezzlement and bribe.
+          img.swiper-image(src='../img/phone.png', alt='')
+      .swiper-slide Slide 2
+      .swiper-slide Slide 3
+    // If we need pagination
+    .swiper-pagination
+    // If we need navigation buttons
+    .swiper-button-prev
+    .swiper-button-next
+
+  //- content
+  .ribbon.ribbon1
+    .content
+      h1 服务内容
+      p 更多品质服务，不仅只为塑造一个全面的米度，更为让客户享受一站式服务……
+      .services
+        .service.service-app
+          .img-wrapper
+            img(src="../img/oss/app_solution.png", alt="")
+          span 行业app方案
+        .service.service-design
+          .img-wrapper
+            img(src="../img/oss/advanced.png", alt="")
+          span 高端设计
+        .service.service-outsource
+          .img-wrapper
+            img(src="../img/oss/app.png", alt="")
+          span APP外包
+        .service.service-promote
+          .img-wrapper
+            img(src="../img/oss/promote.png", alt="")
+          span APP推广
+        .service.service-system
+          .img-wrapper
+            img(src="../img/oss/system.png", alt="")
+          span 系统开发
+  .ribbon.ribbon2
+    .content
+      h1 合作流程
+      p 您的所有疑问其实只需要轻轻的一点，米度将会让您豁然开朗！
+      .flow
+        - var titles = ['签订合作意向', '需求沟通', '项目评估', '签订合同', '设计制作', '代码研发', '测试修复', '部署上线', '升级维护']
+        each img, index in ['intension', 'communication', 'evaluate', 'contract', 'design', 'code', 'test', 'deploy','upgrade']
+          .flow-item
+            .icon
+              img(src=`../img/oss/${img}.png`, alt="")
+            span= `${titles[index]}`
+
+      h1 服务客户
+      p 每一位客户都是米度品牌的塑造和成长的见证者，真心感谢您给予米度的机会……
+      .clients
+        - var x = 12
+        while x>0
+          .client
+            img(src=`../img/oss/client${13-x}.png`, alt="")
+          - x--
+        - var x = 12
+        while x>0
+          .client
+            img(src=`../img/oss/client${13-x}.png`, alt="")
+          - x--
+  .ribbon.ribbon3
+    .content
+      h1 案例欣赏
+      p 我们精挑细选出这些案例，只为与您一起对美好事物产生共鸣……
+      .cases
+        - var n = 1
+        while n<7
+          .case 
+            img(src=`../img/oss/case${n}.png`, alt="")
+          - n++
+      .arrow
+        img(src="../img/arrow_down.png", alt="")
+block append js
+  script(src="./lib/swiper/swiper.min.js")
+  script.
+    var mySwiper = new Swiper('.swiper-container', {
+      speed: 400,
+      spaceBetween: 100
+    });

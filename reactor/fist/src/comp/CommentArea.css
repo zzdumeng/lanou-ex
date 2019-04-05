@@ -1,0 +1,4 @@
+.comment-area {
+  display: flex;
+  flex-direction: column;
+}

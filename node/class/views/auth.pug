@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+    link(rel="stylesheet", href="/node_modules/bootstrap/dist/css/bootstrap.min.css")
+    style.
+      .red {
+        color: red;
+      }
+  body
+    //- if login
+    //-   -  cls = "active", red="red"
+    //- h2.one(class={red: login} , class= cls) hello
+    .container
+      .row
+        .col-6.offset-3
+          ul.nav.nav-tabs(role="tablist")
+            li.nav-item
+              //- if login
+              //-   a#login-tab.nav-link.active(href='#login-panel',data-toggle='tab',role='tab',aria-controls='login', aria-selected='true') login
+              //- else
+              a#login-tab.nav-link(class={active: login}, href='#login-panel',data-toggle='tab',role='tab',aria-controls='login', aria-selected='true') login
+            li.nav-item
+              //- if login
+              //-   a#register-tab.nav-link(href='#register-panel',data-toggle='tab',role='tab',aria-controls='login', aria-selected='true') register
+              //- else
+              a#register-tab.nav-link(class={active: !login},href='#register-panel',data-toggle='tab',role='tab',aria-controls='login', aria-selected='true') register
+      .row
+        .tab-content.col-6.offset-3
+          div#login-panel.tab-pane(class={active: login},role='tabpanel', aria-labelledby='login-tab')
+            input(type="text", name="username")
+            input(type="password", name="password")
+            input(type="button", value="login", id="login")
+          div#register-panel.tab-pane(class={active: !login},role='tabpanel', aria-labelledby='register-tab')
+            input(type="text", name="username")
+            input(type="password", name="password")
+            input(type="password", name="passwordAgain")
+            input(type="button", value="register", id="register")
+    script(src="/node_modules/jquery/dist/jquery.min.js")
+    script(src="/node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/public/js/flash.js")
+    script(src="/public/js/auth.js")

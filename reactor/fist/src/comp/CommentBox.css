@@ -1,0 +1,27 @@
+.comment-box {
+  display: flex;
+  flex-direction: row;
+  page-break-after: 20px;
+}
+.right {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.edit {
+  resize: none;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 60px;
+}
+input[type="submit"] {
+  align-self: flex-end;
+  margin-top: 10px;
+  background-color: #f60;
+  border:none;
+  outline: none;
+  border-radius: 0;
+  padding: 20px;
+}

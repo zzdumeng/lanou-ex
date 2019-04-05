@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+  body
+    div
+      div 
+        span name
+        span #{name}
+      div
+        span avatar
+        img#profile-avatar(src="#{avatar}")
+    form(action="")
+      input(type="file", name="avatar", id="avatar", required)
+      input(type="submit", value="update", id="submit")
+    
+    script(src="/public/js/flash.js")
+    script(src="/public/js/profile.js")

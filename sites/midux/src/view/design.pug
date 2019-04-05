@@ -1,0 +1,23 @@
+extends layout
+
+block append css
+  link(rel="stylesheet", href="./css/design.css")
+
+block main
+  .ribbon
+    .content.top
+      h1 标题文字
+      p 在飞速发展的电子产品中，界面设计工作一点点的被重视起来。
+      img.featured(src="../img/design/top.png", alt="")
+      p.desc
+        | 在飞速发展的电子产品中，界面设计工作一点点的被重视起来。做界面设计的“美工”也随之被称之为“UI设计师”或“UI工程师”。其实软件界面设计就像工业产品中的工业造型设计一样，是产品的重要卖点。一个电子产品拥有美观的界面会给人带来舒适的视觉享受，拉近人与商品的距离，是建立在科学性之上的艺术设计。检验一个界面的标准既不是某个项目开发组领导的意见也不是项目成员投票的结果，而是终端用户的感受。
+      img.arrow(src="../img/arrow_down.png")
+
+  .ribbon
+    .content.cases
+      - var n = 9
+      while n > 0
+        .case
+          img(src=`../img/design/${10-n}.png`)
+        - n--
+        

@@ -1,0 +1,14 @@
+.comment {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+.comment img {
+  width: 60px;
+  height: 60px;
+  margin: 0 30px;
+  border-radius: 50%;
+}
+.comment .content {
+  flex: 1;
+}

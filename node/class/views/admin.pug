@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title news admin panel
+    link(rel="stylesheet", href="/node_modules/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/public/css/admin.css")
+  body
+    .container#news
+      .row
+        .col-2 标题
+        .col-3 内容
+        .col-2 作者
+        .col-2 日期
+        .col-3 操作
+
+    .modal#edit-modal(tabindex='-1', role='dialog', data-backdrop='static', data-keyboard='false')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            h5.modal-title Modal title
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') &times;
+          .modal-body
+            input#edit-title(type="text", )
+            input#edit-content(type="text", )
+            select#edit-users(name="")
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button#edit-commit.btn.btn-primary(type='button') 更新
+    .modal#modal(tabindex='-1', role='dialog', data-backdrop='static', data-keyboard='false')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            h5.modal-title Modal title
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') &times;
+          .modal-body
+            input#new-title(type="text", )
+            input#new-content(type="text", )
+            select#users(name="")
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button#commit.btn.btn-primary(type='button') 提交
+    button#modal-button open modal
+    script(src="/node_modules/jquery/dist/jquery.min.js")
+    //- script(src="/node_modules/popper.js/dist/popper.min.js")
+    script(src="/node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/public/js/admin.js")     
+
+
